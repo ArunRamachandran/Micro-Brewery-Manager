@@ -1,0 +1,12 @@
+{
+  "name": "brewery-server-component",
+  "version": "1.0.0",
+  "description": "Backend component for the Brewery management system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Arun K Ramachandran",
+  "license": "ISC"
+}
