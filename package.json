@@ -1,0 +1,14 @@
+{
+  "name": "brewery-management",
+  "version": "1.0.0",
+  "description": "Pragma Brewery Management Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && node server.js\" \"cd client && npm start\""
+  },
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  },
+  "author": "Arun K Ramachandran",
+  "license": "ISC"
+}
