@@ -3,7 +3,7 @@ const initialStata = {
     products: []
 };
 
-const appData = (state = initialStata, action) => {
+export const breweryData = (state = initialStata, action) => {
     const { type, payload } = action;
 
     switch (type) {
@@ -12,5 +12,3 @@ const appData = (state = initialStata, action) => {
             return state;
     }
 }
-
-export default appData;

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import appData from './appReducer';
+import { breweryData } from './appReducer';
 
 export default combineReducers({
-    appData
+    breweryData
 });
