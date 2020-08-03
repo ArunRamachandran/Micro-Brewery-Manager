@@ -4,7 +4,7 @@
   "description": "Pragma Brewery Management Application",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd backend && node server.js\" \"cd client && npm start\""
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\""
   },
   "dependencies": {
     "concurrently": "^4.0.1"

@@ -12,6 +12,7 @@ Providing the realtime information to the customer increases the transperency an
 - [Realtime product constraints and assumptions](#realtime-product-constraints-and-assumptions)
 - [Application design and architecture](#application-architecture)
 - [Front-End architecture](#front-fnd-architecture)
+- [Tech stack](#front-fnd-architecture)
 - [Prerequisite](#prerequisite)
 - [Installation process](#application-set-up)
 - [Test level](#test-level)
@@ -44,6 +45,7 @@ The application has been designed by keeping customer in first place, hence with
 
 Assuming the customer will be in the truck while utilising the product and hence dashbaord includes Charts and color schemes to give quick overview about the realtime product - temperature information. 
 
+## An ideal realtime product design (not implemented)
 In realtime, I assume the application design should be as given below: 
     - Action triggers from temperature sensor on detection of temperature fluctuation
     - Backend server push updated information to UI using websocket and this action will be initiated only when the server receive a temperaure fluctuation information.
@@ -58,4 +60,61 @@ Here is the architecture which has been considered to develop the application wi
 ![Curent product implementation - architecture](https://github.com/ArunRamachandran/Micro-Brewery-Manager/blob/develop/client/src/static/architecture.png)
 
 - Application design & working overview: 
-    
+    - 2 different end points has been developed '/api/products/' and '/api/temperature' to fetch the list of available products from the database and to bring the temeperature details to implement the data polling.
+
+    - The product informations including the ideal tempearure range and category details are loaded within a database. Node server will fetch the product informations and send to UI on demand ( While loading the client )
+
+    - A Higher Order Component has been designed to implment a data polling service and which will be triggering an api 
+
+    - The data will be graphically represnted with a bar chart to the customer with a color scheme as per the current tempearture of each ategory of product by considering the ideal temperature range. 
+
+# Front-End architecture
+
+The front-end module has been developed by considering the following architecture. 
+
+![Front-End - architecture](https://github.com/ArunRamachandran/Micro-Brewery-Manager/blob/develop/client/src/static/front-end-architecture.png)
+
+# Tech stack
+
+- Front-End:
+    - React, Redux, Router
+    - Less ( Styling )
+    - Webpack ( Module bundler )
+    - Jest, Enzyme ( Unit testing )
+    - Cypress ( integration testing )
+
+- Backend: 
+    - Node, Express
+
+Each sections are bootstraped with my own custom configurations and no code geberators are used to initialise the project. 
+
+# Prerequisite
+
+Node v10.0.0
+npm v5.6.0
+
+#Installation process
+
+Both front-end and back-end modules are decoupled and different set of dependencies has maintained for each modules. 
+
+- Clone the project
+
+```   
+git clone git@github.com:ArunRamachandran/Micro-Brewery-Manager.git
+```
+
+## Install the project dependencies
+
+Navigate to client/server and run
+
+```   
+npm install
+```
+
+## Run both client and server concurrently
+
+Navigate to parent directory and run 
+
+```   
+npm start
+```
