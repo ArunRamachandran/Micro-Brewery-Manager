@@ -45,3 +45,6 @@ The application has been designed by keeping customer in first place, hence with
 Assuming the customer will be in the truck while utilising the product and hence dashbaord includes Charts and color schemes to give quick overview about the realtime product - temperature information. 
 
 In realtime, I assume the application design should be as given below: 
+
+![Realtime product architecture](https://github.com/ArunRamachandran/Micro-Brewery-Manager/blob/develop/client/src/static/ideal_application_design.png)
+
