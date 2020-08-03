@@ -45,6 +45,17 @@ The application has been designed by keeping customer in first place, hence with
 Assuming the customer will be in the truck while utilising the product and hence dashbaord includes Charts and color schemes to give quick overview about the realtime product - temperature information. 
 
 In realtime, I assume the application design should be as given below: 
+    - Action triggers from temperature sensor on detection of temperature fluctuation
+    - Backend server push updated information to UI using websocket and this action will be initiated only when the server receive a temperaure fluctuation information.
+    - There will be a communication channel established between client and server with websocket. 
 
 ![Realtime product architecture](https://github.com/ArunRamachandran/Micro-Brewery-Manager/blob/develop/client/src/static/ideal_application_design.png)
 
+## Current implementation and system architecture design
+
+Here is the architecture which has been considered to develop the application within the time frame. 
+
+![Curent product implementation - architecture](https://github.com/ArunRamachandran/Micro-Brewery-Manager/blob/develop/client/src/static/architecture.png)
+
+- Application design & working overview: 
+    
